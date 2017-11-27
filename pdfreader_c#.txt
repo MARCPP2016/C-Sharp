@@ -1,0 +1,60 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Editor_pdf
+{
+    public partial class Cat_Pdf : Form
+    {
+        public Cat_Pdf()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            /*
+            OpenFileDialog open = new  OpenFileDialog();
+
+            if(open.ShowDialog()==DialogResult.OK){
+
+                axAcroPDF1.src = open.FileName;
+            
+            }
+             * */
+        }
+
+        private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void abrirToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+
+                axAcroPDF1.src = open.FileName;
+
+            }
+        }
+
+        private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+    }
+}

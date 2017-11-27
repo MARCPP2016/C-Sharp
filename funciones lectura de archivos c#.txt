@@ -1,0 +1,94 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+/*
+ 
+ Importantisiomo leer desde archivo de texto!!!!
+
+string text = System.IO.File.ReadAllText("prueba.txt");
+ * 
+ -Escribir fichero: StreamWriter escribir = File.AppendText("prueba2.txt");
+                -escribir.WriteLine("hola mundo\n");
+                 -escribir.Close();
+   
+ -Leer fichero: StreamReader leer = File.OpenText("prueba2.txt");
+                -mitexto = leer.ReadLine();
+                -System.Console.Write(mitexto);
+                -leer.Close();
+   
+ -Abrir y crear fichero: StreamWriter texto = File.CreateText("prueba2.txt");
+            
+ * 
+ * Hay que manejar esepciones!!!!!!
+ * 
+ * al final probamos 
+ * leer desde consola y guardamos en archivo
+ */
+
+namespace Pruebacconsola
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+           
+
+            try{
+
+                string mitexto;
+                /*
+                mitexto = Console.ReadLine();
+                StreamWriter escribir = File.AppendText("prueba2.txt");
+                
+                
+                escribir.WriteLine(mitexto);
+                escribir.Close();
+                //StreamWriter texto = File.CreateText("prueba2.txt");
+            
+                //texto.WriteLine("hola mundo");
+
+                
+                */
+                StreamReader leer = File.OpenText("prueba2.txt");
+
+                    mitexto = leer.ReadLine();
+                    System.Console.Write(mitexto," \n");
+                    leer.Close();
+
+
+                 Console.ReadKey();
+            }catch(FileNotFoundException fe){
+            
+                System.Console.WriteLine("erro "+fe.Message);
+                Console.ReadKey();
+            }
+            
+        
+          
+                    
+        }
+    }
+
+}
+
+
+abrir
+
+   //mostramos opendialog()
+            OpenFileDialog op = new  OpenFileDialog();
+
+            if(op.ShowDialog()==DialogResult.OK){
+
+                //pasamos bitmap a picture box1
+                pictureBox1.Image = new Bitmap(op.OpenFile());
+                //entramos a propiedades
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                
+            
+            op.Dispose();
+            
+            }
