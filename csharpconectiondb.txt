@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
+/*
+ 
+ Ahora bien conetamos a base de datos con lib  
+ MySql.Data.MySqlClient que tenemos que agregar como referencia.
+ * 
+ * Luego abrimos una conexion y utlizamos try para conetenr errores. 
+ */
+
+
+namespace ConectionDb
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        MySqlConnection con = new MySqlConnection("SERVER=127.0.0.1"+" ;UID=root;"+";DATABASE=datos"+";PWD=");
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            try{
+                con.Open();
+                MessageBox.Show("abierto");
+               
+            
+            }catch {
+                MessageBox.Show("cerrado");
+           
+            
+            }
+        }
+    }
+}
