@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+/*
+-----------------------------------------
+-Sample test
+-Function return parameter inside Array
+------------------------------------------
+*/
+
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Take the num return
+            System.Console.WriteLine("La cantidad de veces es :"+getarray(3));
+            System.Console.ReadKey();
+        }
+        
+        //Function take parameter and return how much are in the array.
+        public static int getarray(int num)
+        {
+            int[] arr = { 2, 3, 4, 3, 2, 1 };
+            int ent = num;
+            int devolver = 0;
+            foreach ( int i in arr) {
+
+                if (i==ent)
+                {
+
+                    devolver++;
+                }
+         }
+            return devolver;
+        }
+    }
+}
