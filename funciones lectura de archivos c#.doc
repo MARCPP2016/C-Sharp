@@ -22,9 +22,9 @@ string text = System.IO.File.ReadAllText("prueba.txt");
  -Abrir y crear fichero: StreamWriter texto = File.CreateText("prueba2.txt");
             
  * 
- * Hay que manejar esepciones!!!!!!
+ * Hay que manejar excepciones!!!!!!
  * 
- * al final probamos 
+ * 
  * leer desde consola y guardamos en archivo
  */
 
