@@ -27,7 +27,7 @@ namespace ConectionDb
             InitializeComponent();
         }
 
-        MySqlConnection con = new MySqlConnection("SERVER=127.0.0.1"+" ;UID=root;"+";DATABASE=datos"+";PWD=");
+        MySqlConnection con = new MySqlConnection("SERVER=127.0.0.1"+" ;UID=root;"+";DATABASE=datos"+";PWD="+"SslMode = none;");
 
         private void button1_Click(object sender, EventArgs e)
         {
