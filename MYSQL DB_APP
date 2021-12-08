@@ -1,0 +1,49 @@
+using System;
+using System.Data;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
+using System.ComponentModel;
+
+namespace ConsoleAppDB
+{
+    class Program
+    {
+
+        public static void GetConnect()
+        {
+
+            MySqlConnection con = new MySqlConnection("SERVER=127.0.0.1" + " ;UID=root;" + ";DATABASE=tienda_online" + ";PWD=;" + "SslMode = none;");
+            
+
+            
+                try
+                {
+                    con.Open();
+                    
+                      Console.Write("Open");
+               
+                      Console.ReadKey();
+
+
+            }
+                catch(MySqlException ex)
+                {
+                     Console.WriteLine("close \n"+ex.Message+"\n");
+                   Console.ReadKey();
+
+
+            }
+        
+        }
+
+        static void Main(string[] args)
+        {
+
+            GetConnect();
+            
+        }
+    }
+}
