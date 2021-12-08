@@ -11,10 +11,9 @@ using MySql.Data.MySqlClient;
 
 /*
  
- Ahora bien conetamos a base de datos con lib  
- MySql.Data.MySqlClient que tenemos que agregar como referencia.
+ Ahora bien conectamos a base de datos con lib-> MySql.Data.MySqlClient que tenemos que agregar como dependencia.
  * 
- * Luego abrimos una conexion y utlizamos try para conetenr errores. 
+ * Luego abrimos una conexion y utlizamos try para manejar errores. 
  */
 
 
