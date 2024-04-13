@@ -1,0 +1,19 @@
+    //delegates-------------------------------------------
+		
+		 public  delegate void cat();
+        cat g=ww;
+        public static  void ww()
+        {
+            Console.Write("Hello test");
+        }
+        static void Main(string[] args)
+        {
+          Program f= new Program();
+
+            f.g();
+            
+
+
+            Console.ReadKey();
+
+        }
