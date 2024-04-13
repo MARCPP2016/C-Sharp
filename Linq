@@ -1,0 +1,24 @@
+ // Specify the data source.
+      public static int[] scores = { 97, 92, 81, 60 };
+
+        // Define the query expression.
+       static IEnumerable<int> scoreQuery =
+            from score in scores
+            where score > 80
+            select score;
+
+
+        static void Main(string[] args)
+        {
+
+
+            // Execute the query.
+            foreach (var i in scoreQuery)
+            {
+                Console.Write(i + "Hello  Linq");
+            }
+
+            
+            Console.ReadKey();
+
+        }
