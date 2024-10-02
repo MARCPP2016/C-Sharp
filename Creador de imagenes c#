@@ -1,0 +1,81 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+/*
+ ------------------------------------------------------
+ Creador de archivos desde imagen  a otra imagen
+---------------------------------------------------------
+ */
+
+ /* -------------------------------------
+ Poner extension en formato de archivos
+ ----------------------------------------
+ */
+namespace Creadorbinario
+{
+    public partial class Form1 : Form
+    {
+        ImageFormat format = ImageFormat.Png;
+        SaveFileDialog save = new SaveFileDialog();
+        OpenFileDialog open;
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+           
+
+            
+        }
+
+
+        //Abrimos archivo
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (open = new OpenFileDialog())
+            {
+                open.Title = open.FileName;
+                if (open.ShowDialog() == DialogResult.OK)
+                {
+                    pictureBox1.Image = new Bitmap(open.FileName);
+                }
+            }
+        }
+
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+        //Cerramos app
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        //Salvamos archivo
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+          
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                
+                pictureBox1.Image.Save(save.FileName,format);
+
+            }
+        }
+
+       
+    }
+}
